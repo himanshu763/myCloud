@@ -1,1 +1,6 @@
-rootProject.name = 'demo'
+rootProject.name = 'app'
+
+include 'modules:api-gateway'
+include 'modules:auth-account-service'
+include 'modules:chunk-cloud-service'
+include 'modules:metadata-service'
