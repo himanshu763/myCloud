@@ -1,0 +1,30 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: chunk-cloud-service
+  servlet:
+    multipart:
+      max-file-size: 1GB
+      max-request-size: 1GB
+
+# Cloud provider configurations
+cloud:
+  google-drive:
+    client-id: ${GOOGLE_CLIENT_ID:your-google-client-id}
+    client-secret: ${GOOGLE_CLIENT_SECRET:your-google-client-secret}
+  dropbox:
+    app-key: ${DROPBOX_APP_KEY:your-dropbox-app-key}
+    app-secret: ${DROPBOX_APP_SECRET:your-dropbox-app-secret}
+  mega:
+    email: ${MEGA_EMAIL:your-mega-email}
+    password: ${MEGA_PASSWORD:your-mega-password}
+  jio-cloud:
+    api-key: ${JIO_API_KEY:your-jio-api-key}
+    api-secret: ${JIO_API_SECRET:your-jio-api-secret}
+
+# Metadata management service configuration
+metadata:
+  service:
+    url: ${METADATA_SERVICE_URL:http://localhost:8083/api/metadata}
